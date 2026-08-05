@@ -1,0 +1,3 @@
+Feature_Method,Model,Accuracy,Precision_Weighted,Recall_Weighted,F1_Weighted,F1_Macro
+rfe,ANN,0.9062,0.9129,0.9062,0.9082,0.8453
+rfe,CNN,0.8963,0.9042,0.8963,0.8988,0.8335
