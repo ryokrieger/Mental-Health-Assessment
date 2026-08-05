@@ -1,0 +1,9 @@
+Feature_Method,Model,Best_Params,CV_F1_Macro,Test_Accuracy,Test_F1_Macro
+mir,LR,"{'solver': 'lbfgs', 'max_iter': 500, 'C': 0.1}",0.8784,0.8395,0.7636
+mir,DT,"{'min_samples_split': 8, 'min_samples_leaf': 3, 'max_depth': 9, 'criterion': 'gini'}",0.905,0.8741,0.812
+mir,RF,"{'n_estimators': 300, 'min_samples_split': 2, 'max_features': 'sqrt', 'max_depth': 20}",0.9525,0.8938,0.833
+mir,KNN,"{'weights': 'distance', 'n_neighbors': 4, 'metric': 'manhattan'}",0.9517,0.8889,0.8331
+mir,SVM,"{'kernel': 'rbf', 'gamma': 0.1, 'C': 100}",0.9599,0.8963,0.7989
+mir,GB,"{'n_estimators': 50, 'min_samples_split': 10, 'max_depth': 8, 'learning_rate': 0.3}",0.9496,0.9111,0.8601
+mir,XGB,"{'subsample': 0.6, 'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'colsample_bytree': 0.8}",0.9519,0.8988,0.8376
+mir,LGBM,"{'num_leaves': 100, 'n_estimators': 200, 'min_child_samples': 20, 'learning_rate': 0.05}",0.9545,0.9086,0.8456

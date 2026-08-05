@@ -1,0 +1,9 @@
+Feature_Method,Model,Best_Params,CV_F1_Macro,Test_Accuracy,Test_F1_Macro
+mu,LR,"{'C': 1, 'solver': 'saga'}",0.8811,0.8296,0.7531
+mu,DT,"{'criterion': 'entropy', 'max_depth': 15, 'min_samples_split': 2}",0.9079,0.8321,0.7721
+mu,RF,"{'max_depth': 20, 'max_features': 'sqrt', 'n_estimators': 200}",0.9528,0.9062,0.8462
+mu,KNN,"{'n_neighbors': 3, 'weights': 'distance'}",0.9495,0.8765,0.821
+mu,SVM,"{'C': 100, 'gamma': 'scale', 'kernel': 'rbf'}",0.9573,0.8914,0.8026
+mu,GB,"{'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 100}",0.9538,0.9086,0.8549
+mu,XGB,"{'learning_rate': 0.05, 'max_depth': 6, 'n_estimators': 200}",0.9522,0.9037,0.8608
+mu,LGBM,"{'learning_rate': 0.2, 'n_estimators': 100, 'num_leaves': 50}",0.9532,0.9012,0.8395

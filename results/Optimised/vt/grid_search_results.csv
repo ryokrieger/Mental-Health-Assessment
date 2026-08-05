@@ -1,0 +1,9 @@
+Feature_Method,Model,Best_Params,CV_F1_Macro,Test_Accuracy,Test_F1_Macro
+vt,LR,"{'C': 1, 'solver': 'lbfgs'}",0.8562,0.8296,0.7579
+vt,DT,"{'criterion': 'entropy', 'max_depth': 15, 'min_samples_split': 2}",0.8878,0.8025,0.7117
+vt,RF,"{'max_depth': 20, 'max_features': 'sqrt', 'n_estimators': 200}",0.9366,0.884,0.8068
+vt,KNN,"{'n_neighbors': 3, 'weights': 'distance'}",0.9183,0.8025,0.7237
+vt,SVM,"{'C': 100, 'gamma': 'auto', 'kernel': 'rbf'}",0.93,0.7975,0.7241
+vt,GB,"{'learning_rate': 0.05, 'max_depth': 5, 'n_estimators': 100}",0.9264,0.8543,0.7937
+vt,XGB,"{'learning_rate': 0.05, 'max_depth': 6, 'n_estimators': 200}",0.9242,0.842,0.781
+vt,LGBM,"{'learning_rate': 0.1, 'n_estimators': 200, 'num_leaves': 50}",0.9286,0.8469,0.7859

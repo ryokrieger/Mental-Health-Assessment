@@ -1,0 +1,73 @@
+Feature_Method,Model,Best_Params,CV_F1_Macro,Test_Accuracy,Test_F1_Macro
+rfe,LR,"OrderedDict({'C': 0.012022486912806348, 'max_iter': 1006})",0.8893,0.842,0.769
+rfe,DT,"OrderedDict({'criterion': 'gini', 'max_depth': 12, 'min_samples_leaf': 1, 'min_samples_split': 2})",0.911,0.8519,0.7909
+rfe,RF,"OrderedDict({'max_depth': 10, 'max_features': 'log2', 'min_samples_split': 2, 'n_estimators': 420})",0.9535,0.9037,0.8475
+rfe,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 4, 'weights': 'distance'})",0.954,0.9037,0.8531
+rfe,SVM,"OrderedDict({'C': 34.046554409216576, 'gamma': 0.0995986816990751, 'kernel': 'rbf'})",0.9605,0.9062,0.8283
+rfe,GB,"OrderedDict({'learning_rate': 0.29999999999999993, 'max_depth': 8, 'n_estimators': 50})",0.9512,0.884,0.8339
+rfe,XGB,"OrderedDict({'colsample_bytree': 0.6707044210965756, 'learning_rate': 0.023255208833846838, 'max_depth': 8, 'n_estimators': 300, 'subsample': 1.0})",0.9564,0.8938,0.8389
+rfe,LGBM,"OrderedDict({'learning_rate': 0.06348516039427839, 'min_child_samples': 47, 'n_estimators': 174, 'num_leaves': 87})",0.9548,0.8914,0.8325
+skb,LR,"OrderedDict({'C': 0.031251185284759196, 'max_iter': 1717})",0.8858,0.842,0.7627
+skb,DT,"OrderedDict({'criterion': 'gini', 'max_depth': 17, 'min_samples_leaf': 1, 'min_samples_split': 3})",0.9102,0.8568,0.8039
+skb,RF,"OrderedDict({'max_depth': 14, 'max_features': 'log2', 'min_samples_split': 2, 'n_estimators': 492})",0.9522,0.9062,0.8501
+skb,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 6, 'weights': 'distance'})",0.9484,0.8815,0.8258
+skb,SVM,"OrderedDict({'C': 13.486234634195188, 'gamma': 0.1, 'kernel': 'rbf'})",0.9628,0.8765,0.7814
+skb,GB,"OrderedDict({'learning_rate': 0.04645933395997082, 'max_depth': 3, 'n_estimators': 300})",0.9502,0.8988,0.8319
+skb,XGB,"OrderedDict({'colsample_bytree': 1.0, 'learning_rate': 0.03759787023879407, 'max_depth': 5, 'n_estimators': 300, 'subsample': 0.6})",0.9537,0.9086,0.8667
+skb,LGBM,"OrderedDict({'learning_rate': 0.033927431882814135, 'min_child_samples': 50, 'n_estimators': 300, 'num_leaves': 20})",0.9528,0.9086,0.8423
+fscs,LR,"OrderedDict({'C': 66.36085077612337, 'max_iter': 1551})",0.8747,0.8395,0.7526
+fscs,DT,"OrderedDict({'criterion': 'entropy', 'max_depth': 14, 'min_samples_leaf': 1, 'min_samples_split': 2})",0.9101,0.8617,0.8121
+fscs,RF,"OrderedDict({'max_depth': 28, 'max_features': 'log2', 'min_samples_split': 2, 'n_estimators': 498})",0.9532,0.9012,0.8586
+fscs,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 6, 'weights': 'distance'})",0.9498,0.8642,0.8036
+fscs,SVM,"OrderedDict({'C': 10.59111878126275, 'gamma': 0.1, 'kernel': 'rbf'})",0.9561,0.884,0.8038
+fscs,GB,"OrderedDict({'learning_rate': 0.2967011601776566, 'max_depth': 6, 'n_estimators': 58})",0.9532,0.8914,0.8388
+fscs,XGB,"OrderedDict({'colsample_bytree': 0.6265277221132789, 'learning_rate': 0.04315477117361915, 'max_depth': 8, 'n_estimators': 300, 'subsample': 0.6039835485217286})",0.9538,0.8988,0.8523
+fscs,LGBM,"OrderedDict({'learning_rate': 0.02580960583066845, 'min_child_samples': 10, 'n_estimators': 300, 'num_leaves': 98})",0.9562,0.9111,0.8665
+etc,LR,"OrderedDict({'C': 0.016699234050848583, 'max_iter': 500})",0.8884,0.8395,0.7534
+etc,DT,"OrderedDict({'criterion': 'gini', 'max_depth': 13, 'min_samples_leaf': 1, 'min_samples_split': 2})",0.911,0.8444,0.7841
+etc,RF,"OrderedDict({'max_depth': 12, 'max_features': 'sqrt', 'min_samples_split': 2, 'n_estimators': 485})",0.9548,0.9012,0.8449
+etc,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 4, 'weights': 'distance'})",0.9547,0.884,0.8227
+etc,SVM,"OrderedDict({'C': 30.165172048093936, 'gamma': 0.1, 'kernel': 'rbf'})",0.9583,0.8914,0.8018
+etc,GB,"OrderedDict({'learning_rate': 0.2855025888755427, 'max_depth': 8, 'n_estimators': 298})",0.9515,0.8963,0.8362
+etc,XGB,"OrderedDict({'colsample_bytree': 0.9198213766428692, 'learning_rate': 0.04436313425678925, 'max_depth': 6, 'n_estimators': 229, 'subsample': 0.9615408290026747})",0.9577,0.8864,0.8285
+etc,LGBM,"OrderedDict({'learning_rate': 0.06896237784336451, 'min_child_samples': 19, 'n_estimators': 231, 'num_leaves': 29})",0.9576,0.9037,0.8449
+pc,LR,"OrderedDict({'C': 0.031251185284759196, 'max_iter': 1717})",0.8858,0.842,0.7627
+pc,DT,"OrderedDict({'criterion': 'gini', 'max_depth': 17, 'min_samples_leaf': 1, 'min_samples_split': 3})",0.9102,0.8568,0.8039
+pc,RF,"OrderedDict({'max_depth': 14, 'max_features': 'log2', 'min_samples_split': 2, 'n_estimators': 492})",0.9522,0.9062,0.8501
+pc,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 6, 'weights': 'distance'})",0.9484,0.8815,0.8258
+pc,SVM,"OrderedDict({'C': 13.486234634195188, 'gamma': 0.1, 'kernel': 'rbf'})",0.9628,0.8765,0.7814
+pc,GB,"OrderedDict({'learning_rate': 0.04645933395997082, 'max_depth': 3, 'n_estimators': 300})",0.9502,0.8988,0.8319
+pc,XGB,"OrderedDict({'colsample_bytree': 1.0, 'learning_rate': 0.03759787023879407, 'max_depth': 5, 'n_estimators': 300, 'subsample': 0.6})",0.9537,0.9086,0.8667
+pc,LGBM,"OrderedDict({'learning_rate': 0.033927431882814135, 'min_child_samples': 50, 'n_estimators': 300, 'num_leaves': 20})",0.9528,0.9086,0.8423
+mi,LR,"OrderedDict({'C': 0.22824736391882494, 'max_iter': 501})",0.8794,0.842,0.7683
+mi,DT,"OrderedDict({'criterion': 'entropy', 'max_depth': 16, 'min_samples_leaf': 1, 'min_samples_split': 2})",0.9085,0.8346,0.7751
+mi,RF,"OrderedDict({'max_depth': 16, 'max_features': 'log2', 'min_samples_split': 3, 'n_estimators': 245})",0.9529,0.9037,0.851
+mi,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 4, 'weights': 'distance'})",0.9517,0.8889,0.8331
+mi,SVM,"OrderedDict({'C': 42.89961259700248, 'gamma': 0.1, 'kernel': 'rbf'})",0.9612,0.8963,0.7981
+mi,GB,"OrderedDict({'learning_rate': 0.13729231512732415, 'max_depth': 8, 'n_estimators': 235})",0.9493,0.8914,0.8351
+mi,XGB,"OrderedDict({'colsample_bytree': 0.9198213766428692, 'learning_rate': 0.04436313425678925, 'max_depth': 6, 'n_estimators': 229, 'subsample': 0.9615408290026747})",0.9529,0.9086,0.8591
+mi,LGBM,"OrderedDict({'learning_rate': 0.06348516039427839, 'min_child_samples': 47, 'n_estimators': 174, 'num_leaves': 87})",0.9523,0.8988,0.8263
+mir,LR,"OrderedDict({'C': 0.22824736391882494, 'max_iter': 501})",0.8794,0.842,0.7683
+mir,DT,"OrderedDict({'criterion': 'entropy', 'max_depth': 16, 'min_samples_leaf': 1, 'min_samples_split': 2})",0.9085,0.8346,0.7751
+mir,RF,"OrderedDict({'max_depth': 16, 'max_features': 'log2', 'min_samples_split': 3, 'n_estimators': 245})",0.9529,0.9037,0.851
+mir,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 4, 'weights': 'distance'})",0.9517,0.8889,0.8331
+mir,SVM,"OrderedDict({'C': 42.89961259700248, 'gamma': 0.1, 'kernel': 'rbf'})",0.9612,0.8963,0.7981
+mir,GB,"OrderedDict({'learning_rate': 0.13729231512732415, 'max_depth': 8, 'n_estimators': 235})",0.9493,0.8914,0.8351
+mir,XGB,"OrderedDict({'colsample_bytree': 0.9198213766428692, 'learning_rate': 0.04436313425678925, 'max_depth': 6, 'n_estimators': 229, 'subsample': 0.9615408290026747})",0.9529,0.9086,0.8591
+mir,LGBM,"OrderedDict({'learning_rate': 0.06348516039427839, 'min_child_samples': 47, 'n_estimators': 174, 'num_leaves': 87})",0.9523,0.8988,0.8263
+mu,LR,"OrderedDict({'C': 0.0852378974736118, 'max_iter': 1999})",0.8807,0.8346,0.7574
+mu,DT,"OrderedDict({'criterion': 'entropy', 'max_depth': 13, 'min_samples_leaf': 1, 'min_samples_split': 2})",0.9096,0.8395,0.7779
+mu,RF,"OrderedDict({'max_depth': 17, 'max_features': 'sqrt', 'min_samples_split': 2, 'n_estimators': 498})",0.9542,0.9037,0.8488
+mu,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 6, 'weights': 'distance'})",0.9553,0.8815,0.8319
+mu,SVM,"OrderedDict({'C': 19.80342078518169, 'gamma': 0.1, 'kernel': 'rbf'})",0.9621,0.9037,0.8232
+mu,GB,"OrderedDict({'learning_rate': 0.2578438884524839, 'max_depth': 7, 'n_estimators': 268})",0.9557,0.8988,0.8419
+mu,XGB,"OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.17155805270111482, 'max_depth': 6, 'n_estimators': 50, 'subsample': 1.0})",0.9541,0.9012,0.8502
+mu,LGBM,"OrderedDict({'learning_rate': 0.15849201309311142, 'min_child_samples': 17, 'n_estimators': 200, 'num_leaves': 84})",0.9542,0.9037,0.8474
+vt,LR,"OrderedDict({'C': 0.6016307829589929, 'max_iter': 1878})",0.8569,0.8296,0.7579
+vt,DT,"OrderedDict({'criterion': 'entropy', 'max_depth': 19, 'min_samples_leaf': 1, 'min_samples_split': 4})",0.8896,0.7951,0.7055
+vt,RF,"OrderedDict({'max_depth': 26, 'max_features': 'log2', 'min_samples_split': 4, 'n_estimators': 478})",0.9376,0.879,0.7992
+vt,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 4, 'weights': 'distance'})",0.9265,0.8296,0.7574
+vt,SVM,"OrderedDict({'C': 91.14121688551523, 'gamma': 0.09916962549061586, 'kernel': 'rbf'})",0.9345,0.8123,0.7268
+vt,GB,"OrderedDict({'learning_rate': 0.06850276755883697, 'max_depth': 8, 'n_estimators': 300})",0.9272,0.8469,0.7672
+vt,XGB,"OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.03277123541725301, 'max_depth': 7, 'n_estimators': 256, 'subsample': 0.6})",0.9329,0.8593,0.7834
+vt,LGBM,"OrderedDict({'learning_rate': 0.15849201309311142, 'min_child_samples': 17, 'n_estimators': 200, 'num_leaves': 84})",0.9295,0.842,0.7848

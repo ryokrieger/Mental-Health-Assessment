@@ -1,0 +1,9 @@
+Feature_Method,Model,Best_Params,CV_F1_Macro,Test_Accuracy,Test_F1_Macro
+mir,LR,"OrderedDict({'C': 0.22824736391882494, 'max_iter': 501})",0.8794,0.842,0.7683
+mir,DT,"OrderedDict({'criterion': 'entropy', 'max_depth': 16, 'min_samples_leaf': 1, 'min_samples_split': 2})",0.9085,0.8346,0.7751
+mir,RF,"OrderedDict({'max_depth': 16, 'max_features': 'log2', 'min_samples_split': 3, 'n_estimators': 245})",0.9529,0.9037,0.851
+mir,KNN,"OrderedDict({'metric': 'manhattan', 'n_neighbors': 4, 'weights': 'distance'})",0.9517,0.8889,0.8331
+mir,SVM,"OrderedDict({'C': 42.89961259700248, 'gamma': 0.1, 'kernel': 'rbf'})",0.9612,0.8963,0.7981
+mir,GB,"OrderedDict({'learning_rate': 0.13729231512732415, 'max_depth': 8, 'n_estimators': 235})",0.9493,0.8914,0.8351
+mir,XGB,"OrderedDict({'colsample_bytree': 0.9198213766428692, 'learning_rate': 0.04436313425678925, 'max_depth': 6, 'n_estimators': 229, 'subsample': 0.9615408290026747})",0.9529,0.9086,0.8591
+mir,LGBM,"OrderedDict({'learning_rate': 0.06348516039427839, 'min_child_samples': 47, 'n_estimators': 174, 'num_leaves': 87})",0.9523,0.8988,0.8263
