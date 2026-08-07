@@ -1,0 +1,2 @@
+Model,F1_Macro,F1_Weighted,Accuracy,Eval_Loss
+bert,0.6014,0.7107,0.7111,0.6986

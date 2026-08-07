@@ -1,0 +1,2 @@
+Model,F1_Macro,F1_Weighted,Accuracy,Eval_Loss
+biobert,0.6149,0.7169,0.721,0.7112

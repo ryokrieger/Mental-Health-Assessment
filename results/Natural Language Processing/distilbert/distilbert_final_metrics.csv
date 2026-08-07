@@ -1,0 +1,2 @@
+Model,F1_Macro,F1_Weighted,Accuracy,Eval_Loss
+distilbert,0.6216,0.7054,0.6988,0.6463

@@ -1,0 +1,2 @@
+Model,F1_Macro,F1_Weighted,Accuracy,Eval_Loss
+clinicalbert,0.6384,0.7384,0.7383,0.6037
