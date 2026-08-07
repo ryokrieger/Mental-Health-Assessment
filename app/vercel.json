@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/bindu.py": {
+      "maxDuration": 30,
+      "includeFiles": "models/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/predict", "destination": "/api/bindu" },
+    { "source": "/(.*)",        "destination": "/index.html" }
+  ]
+}

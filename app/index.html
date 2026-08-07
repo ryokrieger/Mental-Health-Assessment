@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23B08D55'/%3E%3C/svg%3E">
+<title>Bindu — Mental Health Assessment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream:  #f7f2ea;
+    --card:   #fffdf8;
+    --gold:   #b8975a;
+    --gold2:  #d4af70;
+    --dark:   #2c2416;
+    --mid:    #5a4a32;
+    --muted:  #8a7560;
+    --border: #e8dece;
+    --stable:     #2d7a4f;
+    --challenged: #b07d2a;
+    --critical:   #963030;
+    --stable-bg:     #edf7f0;
+    --challenged-bg: #fdf5e4;
+    --critical-bg:   #fdf0f0;
+  }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+
+  /* ── screens ── */
+  .screen { display: none; width: 100%; max-width: 620px; animation: fadeIn .35s ease; }
+  .screen.active { display: flex; flex-direction: column; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ── card ── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px 44px;
+    box-shadow: 0 4px 24px rgba(44,36,22,.07);
+  }
+
+  /* ── brand ── */
+  .brand {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: .08em;
+  }
+  .brand-sub {
+    font-size: .75rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ── headings ── */
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: var(--dark);
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+  p { font-size: .95rem; color: var(--mid); line-height: 1.7; margin-bottom: 12px; }
+
+  /* ── divider ── */
+  .divider {
+    width: 40px; height: 1px;
+    background: var(--gold2);
+    margin: 20px auto;
+  }
+
+  /* ── button ── */
+  .btn {
+    display: inline-block;
+    padding: 13px 36px;
+    background: var(--gold);
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background .2s, transform .1s;
+  }
+  .btn:hover { background: var(--gold2); }
+  .btn:active { transform: scale(.97); }
+  .btn-outline {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 10px 24px;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); background: transparent; }
+
+  /* ── progress ── */
+  .progress-wrap { margin-bottom: 28px; }
+  .progress-label {
+    display: flex; justify-content: space-between;
+    font-size: .78rem; color: var(--muted);
+    letter-spacing: .05em; margin-bottom: 8px;
+  }
+  .progress-bar {
+    height: 3px; background: var(--border); border-radius: 2px; overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; background: var(--gold);
+    border-radius: 2px; transition: width .4s ease;
+  }
+
+  /* ── question ── */
+  .q-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem; font-weight: 400; color: var(--dark);
+    line-height: 1.5; margin-bottom: 24px;
+  }
+
+  /* ── options ── */
+  .options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+  .option {
+    display: flex; align-items: center; gap: 14px;
+    padding: 12px 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color .2s, background .2s;
+    font-size: .9rem; color: var(--mid);
+  }
+  .option:hover { border-color: var(--gold2); background: #fdf8f0; }
+  .option.selected {
+    border-color: var(--gold);
+    background: #fdf8f0;
+    color: var(--dark);
+    font-weight: 500;
+  }
+  .option input[type=radio] { display: none; }
+  .option-dot {
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 2px solid var(--border);
+    flex-shrink: 0; transition: border-color .2s, background .2s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .option.selected .option-dot {
+    border-color: var(--gold); background: var(--gold);
+  }
+  .option.selected .option-dot::after {
+    content: ''; width: 6px; height: 6px;
+    background: #fff; border-radius: 50%;
+  }
+  .option-score { margin-left: auto; font-size: .75rem; color: var(--muted); }
+
+  /* ── nav ── */
+  .q-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+  /* ── result ── */
+  .status-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 18px; border-radius: 40px;
+    font-size: .8rem; font-weight: 500; letter-spacing: .08em;
+    text-transform: uppercase; margin-bottom: 16px;
+  }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .status-stable     { background: var(--stable-bg);     color: var(--stable); }
+  .status-challenged { background: var(--challenged-bg); color: var(--challenged); }
+  .status-critical   { background: var(--critical-bg);   color: var(--critical); }
+  .dot-stable     { background: var(--stable); }
+  .dot-challenged { background: var(--challenged); }
+  .dot-critical   { background: var(--critical); }
+
+  .result-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem; font-weight: 500; margin-bottom: 6px;
+  }
+  .result-subtitle { font-size: .9rem; color: var(--muted); margin-bottom: 24px; }
+
+  /* confidence bars */
+  .conf-section { margin-bottom: 24px; }
+  .conf-label {
+    font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px;
+  }
+  .conf-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .conf-name { width: 88px; font-size: .85rem; color: var(--mid); }
+  .conf-track { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .conf-fill { height: 100%; border-radius: 3px; transition: width .8s ease; }
+  .fill-stable     { background: var(--stable); }
+  .fill-challenged { background: var(--challenged); }
+  .fill-critical   { background: var(--critical); }
+  .conf-pct { width: 38px; font-size: .82rem; color: var(--dark); text-align: right; font-weight: 500; }
+
+  /* wellness */
+
+  /* interpretation */
+  .interp {
+    padding: 18px 20px;
+    border-radius: 10px;
+    border-left: 3px solid;
+    font-size: .9rem; line-height: 1.7; color: var(--mid);
+    margin-bottom: 20px;
+  }
+  .interp-stable     { background: var(--stable-bg);     border-color: var(--stable); }
+  .interp-challenged { background: var(--challenged-bg); border-color: var(--challenged); }
+  .interp-critical   { background: var(--critical-bg);   border-color: var(--critical); }
+
+  /* crisis */
+  .crisis-box {
+    background: #fff8f8; border: 1px solid #e8c4c4;
+    border-radius: 10px; padding: 18px 20px; margin-bottom: 20px;
+  }
+  .crisis-title { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--critical); margin-bottom: 10px; font-weight: 500; }
+  .crisis-item { font-size: .88rem; color: var(--mid); margin-bottom: 6px; }
+  .crisis-item strong { color: var(--dark); }
+
+
+  /* loading */
+  .loading { text-align: center; padding: 40px 0; }
+  .spinner {
+    width: 36px; height: 36px; border: 3px solid var(--border);
+    border-top-color: var(--gold); border-radius: 50%;
+    animation: spin .8s linear infinite; margin: 0 auto 16px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 480px) {
+    .card { padding: 28px 22px; }
+    h1 { font-size: 1.5rem; }
+    .q-text { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── WELCOME SCREEN ──────────────────────────────────────────────── -->
+<div class="screen active" id="screen-welcome">
+  <div class="card">
+    <div class="brand">
+      <div class="brand-name">Bindu</div>
+      <div class="brand-sub">Mental Health Screening</div>
+    </div>
+    <div class="divider"></div>
+    <h1 style="text-align:center;">How are you doing?</h1>
+    <p style="text-align:center;">
+      This brief 15-question screening tool assesses stress, anxiety, and depression
+      among university students. It takes about 3 minutes.
+    </p>
+    <p style="text-align:center; font-size:.85rem;">
+      Your responses are not stored and are processed only to generate your result.
+    </p>
+    <div style="text-align:center; margin-top:28px;">
+      <button class="btn" onclick="startAssessment()">Begin Assessment</button>
+    </div>
+    <p class="disclaimer" style="margin-top:24px; text-align:center;">
+      This is a screening tool, not a clinical diagnosis.<br>
+      If you are in distress, please seek professional support.
+    </p>
+  </div>
+</div>
+
+<!-- ── QUESTION SCREEN ────────────────────────────────────────────── -->
+<div class="screen" id="screen-question">
+  <div class="card">
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span id="q-counter">Question 1 of 15</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="q-progress"></div></div>
+    </div>
+    <div class="q-text"  id="q-text"></div>
+    <div class="q-note"   id="q-note" style="display:none; font-size:.82rem; color:var(--muted); background:#fdf8f0; border-left:3px solid var(--gold2); padding:10px 14px; border-radius:6px; margin-bottom:16px; line-height:1.6;"></div>
+    <div class="options" id="q-options"></div>
+    <div class="q-nav">
+      <button class="btn btn-outline" id="btn-prev" onclick="prevQuestion()">← Back</button>
+      <button class="btn" id="btn-next" onclick="nextQuestion()">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── LOADING SCREEN ─────────────────────────────────────────────── -->
+<div class="screen" id="screen-loading">
+  <div class="card">
+    <div class="loading">
+      <div class="spinner"></div>
+      <p style="color:var(--muted);font-size:.9rem;">Analysing your responses…</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── RESULT SCREEN ──────────────────────────────────────────────── -->
+<div class="screen" id="screen-result">
+  <div class="card">
+    <div class="brand" style="margin-bottom:20px;">
+      <div class="brand-name">Bindu</div>
+    </div>
+    <div id="status-badge"></div>
+    <div class="result-title" id="result-title"></div>
+    <div class="result-subtitle" id="result-subtitle"></div>
+
+    <div class="conf-section">
+      <div class="conf-label">Prediction Confidence</div>
+      <div class="conf-row">
+        <span class="conf-name">Stable</span>
+        <div class="conf-track"><div class="conf-fill fill-stable" id="bar-stable"></div></div>
+        <span class="conf-pct" id="pct-stable"></span>
+      </div>
+      <div class="conf-row">
+        <span class="conf-name">Challenged</span>
+        <div class="conf-track"><div class="conf-fill fill-challenged" id="bar-challenged"></div></div>
+        <span class="conf-pct" id="pct-challenged"></span>
+      </div>
+      <div class="conf-row">
+        <span class="conf-name">Critical</span>
+        <div class="conf-track"><div class="conf-fill fill-critical" id="bar-critical"></div></div>
+        <span class="conf-pct" id="pct-critical"></span>
+      </div>
+    </div>
+
+    <div id="interpretation"></div>
+    <div id="crisis-box" style="display:none;">
+      <div class="crisis-box">
+        <div class="crisis-title">🇧🇩 Crisis Support — Bangladesh</div>
+        <div class="crisis-item"><strong>Kaan Pete Roi:</strong> 01779-554391 (emotional support)</div>
+        <div class="crisis-item"><strong>National Helpline:</strong> 16789</div>
+        <div class="crisis-item"><strong>Your university counselling service</strong></div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:8px;">
+      <button class="btn" onclick="resetAssessment()">Take Assessment Again</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── Question bank ────────────────────────────────────────────────────────────
+const QUESTIONS = [
+  {
+    key: "PSS3",
+    text: "How often have you felt nervous and stressed because of academic pressure?",
+    options: [
+      { label: "Never",        value: 0 },
+      { label: "Almost Never", value: 1 },
+      { label: "Sometimes",    value: 2 },
+      { label: "Fairly Often", value: 3 },
+      { label: "Very Often",   value: 4 },
+    ]
+  },
+  {
+    key: "GAD1",
+    text: "How often have you felt nervous, anxious, or on edge due to academic pressure?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "GAD2",
+    text: "How often have you been unable to stop worrying about your academic affairs?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "GAD3",
+    text: "How often have you had trouble relaxing due to academic pressure?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "GAD4",
+    text: "How often have you been easily annoyed or irritated because of academic pressure?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "GAD5",
+    text: "How often have you worried too much about academic affairs?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "GAD6",
+    text: "How often have you been so restless due to academic pressure that it was hard to sit still?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "GAD7",
+    text: "How often have you felt afraid, as if something awful might happen?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "PHQ2",
+    text: "How often have you been feeling down, depressed, or hopeless?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "PHQ3",
+    text: "How often have you had trouble falling or staying asleep, or sleeping too much?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "PHQ4",
+    text: "How often have you been feeling tired or having little energy?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "PHQ5",
+    text: "How often have you had poor appetite or been overeating?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "PHQ6",
+    text: "How often have you been feeling bad about yourself — or that you are a failure, or have let yourself or your family down?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "PHQ7",
+    text: "How often have you had trouble concentrating on things such as studying or reading?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+  {
+    key: "PHQ8",
+    text: "How often have you moved or spoken so slowly that others have noticed, or been so restless that you moved around more than usual?",
+    options: [
+      { label: "Not at all",              value: 0 },
+      { label: "Several days",            value: 1 },
+      { label: "More than half the days", value: 2 },
+      { label: "Nearly every day",        value: 3 },
+    ]
+  },
+];
+
+// ── State
+
+// ── State
+
+// ── State ────────────────────────────────────────────────────────────────────
+let currentQ   = 0;
+let responses  = {};
+
+// ── Screen management ────────────────────────────────────────────────────────
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + id).classList.add('active');
+}
+
+// ── Start ────────────────────────────────────────────────────────────────────
+function startAssessment() {
+  currentQ  = 0;
+  responses = {};
+  renderQuestion();
+  showScreen('question');
+}
+
+// ── Render question ──────────────────────────────────────────────────────────
+function renderQuestion() {
+  const q   = QUESTIONS[currentQ];
+  const idx = currentQ + 1;
+  const pct = Math.round((currentQ / QUESTIONS.length) * 100);
+
+  document.getElementById('q-counter').textContent     = `Question ${idx} of ${QUESTIONS.length}`;
+  document.getElementById('q-text').textContent         = q.text;
+  document.getElementById('q-progress').style.width     = pct + '%';
+  document.getElementById('btn-prev').style.visibility  = currentQ === 0 ? 'hidden' : 'visible';
+  document.getElementById('btn-next').textContent        =
+    currentQ === QUESTIONS.length - 1 ? 'Submit' : 'Next →';
+
+  const noteEl = document.getElementById('q-note');
+  if (q.note) {
+    noteEl.textContent     = q.note;
+    noteEl.style.display   = 'block';
+  } else {
+    noteEl.style.display   = 'none';
+  }
+
+  const saved = responses[q.key];
+  let html = '';
+  q.options.forEach(opt => {
+    const sel = saved === opt.value ? 'selected' : '';
+    html += `
+      <label class="option ${sel}" onclick="selectOption(this, '${q.key}', ${opt.value})">
+        <span class="option-dot"></span>
+        <span>${opt.label}</span>
+        <span class="option-score">${opt.value}</span>
+        <input type="radio" name="q" value="${opt.value}" ${saved === opt.value ? 'checked' : ''}/>
+      </label>`;
+  });
+  document.getElementById('q-options').innerHTML = html;
+}
+
+// ── Select option ────────────────────────────────────────────────────────────
+function selectOption(el, key, value) {
+  document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  responses[key] = value;
+}
+
+// ── Navigation ───────────────────────────────────────────────────────────────
+function nextQuestion() {
+  const q = QUESTIONS[currentQ];
+  if (responses[q.key] === undefined) {
+    alert('Please select an answer before continuing.');
+    return;
+  }
+  if (currentQ < QUESTIONS.length - 1) {
+    currentQ++;
+    renderQuestion();
+  } else {
+    submitAssessment();
+  }
+}
+
+function prevQuestion() {
+  if (currentQ > 0) { currentQ--; renderQuestion(); }
+}
+
+// ── Keyboard nav ─────────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('screen-question').classList.contains('active')) return;
+  const q = QUESTIONS[currentQ];
+  if (e.key >= '1' && e.key <= '5') {
+    const idx = parseInt(e.key) - 1;
+    if (idx < q.options.length) {
+      const labels = document.querySelectorAll('.option');
+      if (labels[idx]) selectOption(labels[idx], q.key, q.options[idx].value);
+    }
+  }
+  if (e.key === 'ArrowRight' || e.key === 'Enter') nextQuestion();
+  if (e.key === 'ArrowLeft')                        prevQuestion();
+});
+
+// ── Submit ───────────────────────────────────────────────────────────────────
+async function submitAssessment() {
+  showScreen('loading');
+  try {
+    const res  = await fetch('/api/predict', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ responses }),
+    });
+    const data = await res.json();
+    renderResult(data);
+    showScreen('result');
+  } catch (err) {
+    alert('Something went wrong. Please try again.');
+    showScreen('question');
+  }
+}
+
+// ── Render result ────────────────────────────────────────────────────────────
+const INTERP = {
+  Stable: `Your responses suggest your mental health is currently <strong>stable</strong>.
+    You are managing academic pressures well. Continue maintaining healthy habits —
+    regular sleep, physical activity, and social connection — and don't hesitate to
+    seek support if things change.`,
+  Challenged: `Your responses indicate you may be experiencing <strong>moderate</strong> levels of
+    stress, anxiety, or low mood. This is common among university students, especially
+    during demanding periods. Consider speaking with a trusted friend, family member,
+    or a counsellor at your university.`,
+  Critical: `Your responses suggest you may be experiencing <strong>significant</strong> mental
+    health challenges. Please consider reaching out to a mental health professional,
+    your university counselling service, or a trusted person as soon as possible.
+    You do not have to manage this alone.`,
+};
+
+const SUBTITLES = {
+  Stable:     'Your mental health appears to be in a good place.',
+  Challenged: 'You may benefit from additional support.',
+  Critical:   'We recommend seeking professional support soon.',
+};
+
+function renderResult(data) {
+  const pred  = data.prediction;
+  const probs = data.probabilities;
+  const cls   = pred.toLowerCase();
+
+  // Badge
+  document.getElementById('status-badge').innerHTML = `
+    <div class="status-badge status-${cls}">
+      <span class="status-dot dot-${cls}"></span>${pred}
+    </div>`;
+
+  document.getElementById('result-title').textContent    = pred + ' Mental Health';
+  document.getElementById('result-subtitle').textContent = SUBTITLES[pred];
+
+  // Confidence bars
+  ['Stable','Challenged','Critical'].forEach(c => {
+    const p = probs[c] || 0;
+    document.getElementById('bar-'  + c.toLowerCase()).style.width = p + '%';
+    document.getElementById('pct-'  + c.toLowerCase()).textContent  = p + '%';
+  });
+
+  // Interpretation
+  document.getElementById('interpretation').innerHTML = `
+    <div class="interp interp-${cls}">${INTERP[pred]}</div>`;
+
+  // Crisis box for Critical only
+  document.getElementById('crisis-box').style.display =
+    pred === 'Critical' ? 'block' : 'none';
+}
+
+// ── Reset ────────────────────────────────────────────────────────────────────
+function resetAssessment() {
+  currentQ  = 0;
+  responses = {};
+  showScreen('welcome');
+}
+</script>
+</body>
+</html>
