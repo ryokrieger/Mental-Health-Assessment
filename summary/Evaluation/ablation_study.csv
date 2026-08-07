@@ -1,0 +1,5 @@
+Configuration,F1_Macro_Mean,F1_Macro_Std,Accuracy_Mean,SMOTE,N_Features
+Config 1 — No pipeline,0.8696,0.0195,0.912,False,26
+Config 2 — Feature selection (SKB 15),0.8528,0.0232,0.8996,False,15
+Config 3 — Feature selection + SMOTE,0.8543,0.0254,0.8981,True,15
+Config 4 — Full pipeline + Bayes tuning,0.8596,0.0236,0.9021,True,15
