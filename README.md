@@ -67,7 +67,7 @@ The pipeline is organised as a sequence of Jupyter notebooks, each handling one 
 |---|---|---|
 | `01_Data_Preprocessing` | Cleaning & labelling | Column standardisation, reverse-scoring of positively worded PSS items, scale scoring, clinical thresholding, majority-vote MHS labelling, duplicate removal, EDA figures, text-narrative generation |
 | `02_Feature_Engineering` | Feature selection | Nine independent feature-selection methods, each reducing the 26 scale items to a 15-feature subset |
-| `03_Model_Training` | Baseline ML | Ten classical ML algorithms trained on each of the nine feature sets |
+| `03_Model_Training` | Baseline ML | Eight classical ML algorithms trained on each of the nine feature sets, plus CNN/ANN deep learning baselines |
 | `04_Hyperparameter_Optimisation` | Tuning + DL | Grid Search, Randomised Search, and Bayesian optimisation of the top models; CNN and ANN deep-learning baselines |
 | `05_NLP_Fine_Tuning` | Transformers | Fine-tuning of BERT, DistilBERT, BioBERT, ClinicalBERT, and ALBERT on the generated text narratives |
 | `06_Explainability_Analysis` | Interpretability | Global SHAP (TreeExplainer, multi-class) and per-class LIME explanations for the best model |
@@ -79,7 +79,7 @@ Nine feature-selection methods — Recursive Feature Elimination (RFE), SelectKB
 
 ### Modelling
 
-- **Classical ML**: Logistic Regression, Decision Tree, Random Forest, KNN, SVM, AdaBoost, Gradient Boosting, XGBoost, and LightGBM, each trained across all nine feature sets.
+- **Classical ML**: Logistic Regression, Decision Tree, Random Forest, KNN, SVM, Gradient Boosting, XGBoost, and LightGBM (eight algorithms), each trained across all nine feature sets.
 - **Hyperparameter optimisation**: Grid Search, Randomised Search, and Bayesian optimisation applied to the strongest model/feature-set combinations.
 - **Deep learning**: CNN and ANN architectures trained on the same tabular feature sets for comparison against classical ML.
 - **NLP**: Five BERT-family transformers fine-tuned on the generated text narratives, to test whether a language-model approach to the same underlying information outperforms structured tabular modelling.
