@@ -1,0 +1,44 @@
+# ── Core data & numerics ──────────────────────
+numpy
+pandas
+scipy
+
+# ── Machine learning ─────────────────────────
+scikit-learn
+imbalanced-learn
+xgboost
+lightgbm
+scikit-optimize
+
+# ── Deep learning ──────────────
+torch
+torchvision
+
+# ── NLP / Transformers ────────────────────────
+transformers
+datasets
+tokenizers
+accelerate
+sentencepiece
+
+# ── Explainability ────────────────────────────
+lime
+shap
+
+# ── Statistical testing ───────────────────────
+pingouin
+statsmodels
+
+# ── Visualisation ─────────────────────────────
+matplotlib
+seaborn
+
+# ── Notebook environment ──────────────────────
+jupyter
+ipykernel
+ipywidgets
+tqdm
+
+# ── Utilities ─────────────────────────────────
+joblib
+python-dotenv
