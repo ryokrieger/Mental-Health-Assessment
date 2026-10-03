@@ -1,0 +1,10 @@
+Method,Method_Name,Resamples,Mean_Pairwise_Jaccard,Mean_Jaccard_To_Main_Selection,Items_In_Every_Resample,Items_In_90pct_Or_More,Resamples_Identical_To_Main_Selection
+RFE,Recursive Feature Elimination (Random Forest),25,0.866,0.891,10,12,5
+SKB,ANOVA F-test (SelectKBest),25,0.871,0.896,12,13,5
+FSCS,Chi-squared test,25,0.94,0.96,13,14,17
+ETC,Extra Trees importance,25,0.858,0.879,12,13,6
+PC,Pearson correlation,25,0.871,0.896,12,13,5
+MI,Mutual information (classification),25,0.842,0.869,10,12,4
+MIR,Mutual information (regression),25,0.828,0.822,9,12,0
+MU,Fewest unique values,25,1.0,1.0,15,15,25
+VT,Highest variance,25,0.806,0.803,9,11,1

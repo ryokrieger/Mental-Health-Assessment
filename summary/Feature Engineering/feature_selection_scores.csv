@@ -1,0 +1,235 @@
+Method,Method_Name,Item,Item_Name,Score,Rank,Selected
+RFE,Recursive Feature Elimination (Random Forest),PSS1,Academic Upset,10.0,17,False
+RFE,Recursive Feature Elimination (Random Forest),PSS2,Lost Control,12.0,1,True
+RFE,Recursive Feature Elimination (Random Forest),PSS3,Academic Nervousness,9.0,18,False
+RFE,Recursive Feature Elimination (Random Forest),PSS4,Cannot Cope,12.0,2,True
+RFE,Recursive Feature Elimination (Random Forest),PSS5,Handling Confidence,2.0,25,False
+RFE,Recursive Feature Elimination (Random Forest),PSS6,Going Well,5.0,22,False
+RFE,Recursive Feature Elimination (Random Forest),PSS7,Irritation Control,1.0,26,False
+RFE,Recursive Feature Elimination (Random Forest),PSS8,Top Performance,3.0,24,False
+RFE,Recursive Feature Elimination (Random Forest),PSS9,Grade Anger,6.0,21,False
+RFE,Recursive Feature Elimination (Random Forest),PSS10,Mounting Difficulties,12.0,3,True
+RFE,Recursive Feature Elimination (Random Forest),GAD1,Feeling Anxious,12.0,4,True
+RFE,Recursive Feature Elimination (Random Forest),GAD2,Uncontrollable Worry,12.0,5,True
+RFE,Recursive Feature Elimination (Random Forest),GAD3,Trouble Relaxing,12.0,6,True
+RFE,Recursive Feature Elimination (Random Forest),GAD4,Easily Irritated,12.0,7,True
+RFE,Recursive Feature Elimination (Random Forest),GAD5,Excessive Worry,12.0,8,True
+RFE,Recursive Feature Elimination (Random Forest),GAD6,Restlessness,12.0,9,True
+RFE,Recursive Feature Elimination (Random Forest),GAD7,Feeling Afraid,12.0,10,True
+RFE,Recursive Feature Elimination (Random Forest),PHQ1,Low Interest,4.0,23,False
+RFE,Recursive Feature Elimination (Random Forest),PHQ2,Feeling Down,12.0,11,True
+RFE,Recursive Feature Elimination (Random Forest),PHQ3,Sleep Problems,11.0,16,False
+RFE,Recursive Feature Elimination (Random Forest),PHQ4,Low Energy,12.0,12,True
+RFE,Recursive Feature Elimination (Random Forest),PHQ5,Appetite Change,12.0,13,True
+RFE,Recursive Feature Elimination (Random Forest),PHQ6,Low Self-Worth,12.0,14,True
+RFE,Recursive Feature Elimination (Random Forest),PHQ7,Poor Concentration,12.0,15,True
+RFE,Recursive Feature Elimination (Random Forest),PHQ8,Psychomotor Change,8.0,19,False
+RFE,Recursive Feature Elimination (Random Forest),PHQ9,Self-Harm Thoughts,7.0,20,False
+SKB,ANOVA F-test (SelectKBest),PSS1,Academic Upset,1275.6910181119033,18,False
+SKB,ANOVA F-test (SelectKBest),PSS2,Lost Control,1609.9238945609504,12,True
+SKB,ANOVA F-test (SelectKBest),PSS3,Academic Nervousness,1438.5449688451022,14,True
+SKB,ANOVA F-test (SelectKBest),PSS4,Cannot Cope,1291.5926696766128,17,False
+SKB,ANOVA F-test (SelectKBest),PSS5,Handling Confidence,21.556751753841116,26,False
+SKB,ANOVA F-test (SelectKBest),PSS6,Going Well,45.66875225082097,23,False
+SKB,ANOVA F-test (SelectKBest),PSS7,Irritation Control,34.99326552037516,25,False
+SKB,ANOVA F-test (SelectKBest),PSS8,Top Performance,43.435863285638874,24,False
+SKB,ANOVA F-test (SelectKBest),PSS9,Grade Anger,1169.6783989808705,20,False
+SKB,ANOVA F-test (SelectKBest),PSS10,Mounting Difficulties,1431.0319377619585,15,True
+SKB,ANOVA F-test (SelectKBest),GAD1,Feeling Anxious,3150.886362582364,2,True
+SKB,ANOVA F-test (SelectKBest),GAD2,Uncontrollable Worry,1252.9041296825924,19,False
+SKB,ANOVA F-test (SelectKBest),GAD3,Trouble Relaxing,1900.7618709257467,9,True
+SKB,ANOVA F-test (SelectKBest),GAD4,Easily Irritated,2833.303210439347,6,True
+SKB,ANOVA F-test (SelectKBest),GAD5,Excessive Worry,2913.2705418959854,5,True
+SKB,ANOVA F-test (SelectKBest),GAD6,Restlessness,2533.4032889371974,7,True
+SKB,ANOVA F-test (SelectKBest),GAD7,Feeling Afraid,2950.345819244623,4,True
+SKB,ANOVA F-test (SelectKBest),PHQ1,Low Interest,254.89364521359545,22,False
+SKB,ANOVA F-test (SelectKBest),PHQ2,Feeling Down,3357.3546685283045,1,True
+SKB,ANOVA F-test (SelectKBest),PHQ3,Sleep Problems,1794.6361589318649,10,True
+SKB,ANOVA F-test (SelectKBest),PHQ4,Low Energy,2475.578876314867,8,True
+SKB,ANOVA F-test (SelectKBest),PHQ5,Appetite Change,1509.901623137451,13,True
+SKB,ANOVA F-test (SelectKBest),PHQ6,Low Self-Worth,2979.604719485936,3,True
+SKB,ANOVA F-test (SelectKBest),PHQ7,Poor Concentration,1791.739991138739,11,True
+SKB,ANOVA F-test (SelectKBest),PHQ8,Psychomotor Change,1394.328817653625,16,False
+SKB,ANOVA F-test (SelectKBest),PHQ9,Self-Harm Thoughts,979.427963841293,21,False
+FSCS,Chi-squared test,PSS1,Academic Upset,1149.9287552322482,19,False
+FSCS,Chi-squared test,PSS2,Lost Control,1329.0514865288667,15,True
+FSCS,Chi-squared test,PSS3,Academic Nervousness,1014.1018833462967,20,False
+FSCS,Chi-squared test,PSS4,Cannot Cope,1186.7075124805253,17,False
+FSCS,Chi-squared test,PSS5,Handling Confidence,31.467199989954313,26,False
+FSCS,Chi-squared test,PSS6,Going Well,52.41224862578585,23,False
+FSCS,Chi-squared test,PSS7,Irritation Control,36.44691391347906,25,False
+FSCS,Chi-squared test,PSS8,Top Performance,48.91874297731806,24,False
+FSCS,Chi-squared test,PSS9,Grade Anger,1013.6111209325161,21,False
+FSCS,Chi-squared test,PSS10,Mounting Difficulties,1162.070141571191,18,False
+FSCS,Chi-squared test,GAD1,Feeling Anxious,1718.0635078224743,4,True
+FSCS,Chi-squared test,GAD2,Uncontrollable Worry,1271.5343688357875,16,False
+FSCS,Chi-squared test,GAD3,Trouble Relaxing,1472.1299031199371,11,True
+FSCS,Chi-squared test,GAD4,Easily Irritated,1640.2257336540733,6,True
+FSCS,Chi-squared test,GAD5,Excessive Worry,1633.0558383358452,7,True
+FSCS,Chi-squared test,GAD6,Restlessness,1641.5863832216573,5,True
+FSCS,Chi-squared test,GAD7,Feeling Afraid,1963.4600927973715,1,True
+FSCS,Chi-squared test,PHQ1,Low Interest,346.13785238417756,22,False
+FSCS,Chi-squared test,PHQ2,Feeling Down,1923.2826760543753,2,True
+FSCS,Chi-squared test,PHQ3,Sleep Problems,1567.9421502760192,9,True
+FSCS,Chi-squared test,PHQ4,Low Energy,1453.9566530892362,13,True
+FSCS,Chi-squared test,PHQ5,Appetite Change,1470.8944008229232,12,True
+FSCS,Chi-squared test,PHQ6,Low Self-Worth,1919.7037030547576,3,True
+FSCS,Chi-squared test,PHQ7,Poor Concentration,1486.2116231042837,10,True
+FSCS,Chi-squared test,PHQ8,Psychomotor Change,1448.6375670894977,14,True
+FSCS,Chi-squared test,PHQ9,Self-Harm Thoughts,1605.8253675133426,8,True
+ETC,Extra Trees importance,PSS1,Academic Upset,0.020814798202288667,18,False
+ETC,Extra Trees importance,PSS2,Lost Control,0.02984899220962454,12,True
+ETC,Extra Trees importance,PSS3,Academic Nervousness,0.020626374116394456,19,False
+ETC,Extra Trees importance,PSS4,Cannot Cope,0.021344762486792356,17,False
+ETC,Extra Trees importance,PSS5,Handling Confidence,0.010497215127736487,25,False
+ETC,Extra Trees importance,PSS6,Going Well,0.010779553139955428,24,False
+ETC,Extra Trees importance,PSS7,Irritation Control,0.00951878899409326,26,False
+ETC,Extra Trees importance,PSS8,Top Performance,0.012124812620140748,22,False
+ETC,Extra Trees importance,PSS9,Grade Anger,0.013929980432380924,21,False
+ETC,Extra Trees importance,PSS10,Mounting Difficulties,0.028673494821072128,14,True
+ETC,Extra Trees importance,GAD1,Feeling Anxious,0.06222118271989153,7,True
+ETC,Extra Trees importance,GAD2,Uncontrollable Worry,0.029272825801659866,13,True
+ETC,Extra Trees importance,GAD3,Trouble Relaxing,0.04200417736396123,9,True
+ETC,Extra Trees importance,GAD4,Easily Irritated,0.08905677846753023,1,True
+ETC,Extra Trees importance,GAD5,Excessive Worry,0.07652464172697382,4,True
+ETC,Extra Trees importance,GAD6,Restlessness,0.05078294949413042,8,True
+ETC,Extra Trees importance,GAD7,Feeling Afraid,0.07526190204413855,5,True
+ETC,Extra Trees importance,PHQ1,Low Interest,0.011960761748519018,23,False
+ETC,Extra Trees importance,PHQ2,Feeling Down,0.08432171627876223,3,True
+ETC,Extra Trees importance,PHQ3,Sleep Problems,0.04122898082999094,10,True
+ETC,Extra Trees importance,PHQ4,Low Energy,0.06903614023536853,6,True
+ETC,Extra Trees importance,PHQ5,Appetite Change,0.026729940002973785,15,True
+ETC,Extra Trees importance,PHQ6,Low Self-Worth,0.08822188743331401,2,True
+ETC,Extra Trees importance,PHQ7,Poor Concentration,0.030042005933090095,11,True
+ETC,Extra Trees importance,PHQ8,Psychomotor Change,0.025275970229666888,16,False
+ETC,Extra Trees importance,PHQ9,Self-Harm Thoughts,0.019899367539549885,20,False
+PC,Pearson correlation,PSS1,Academic Upset,0.695387132120835,18,False
+PC,Pearson correlation,PSS2,Lost Control,0.7359477058941436,12,True
+PC,Pearson correlation,PSS3,Academic Nervousness,0.7166340827950827,14,True
+PC,Pearson correlation,PSS4,Cannot Cope,0.6971703906680355,17,False
+PC,Pearson correlation,PSS5,Handling Confidence,0.025520078948346292,26,False
+PC,Pearson correlation,PSS6,Going Well,0.10123760139559629,24,False
+PC,Pearson correlation,PSS7,Irritation Control,0.04297320434716335,25,False
+PC,Pearson correlation,PSS8,Top Performance,0.14673173280336282,23,False
+PC,Pearson correlation,PSS9,Grade Anger,0.679713930172149,20,False
+PC,Pearson correlation,PSS10,Mounting Difficulties,0.7156702633147303,15,True
+PC,Pearson correlation,GAD1,Feeling Anxious,0.8353664433363801,2,True
+PC,Pearson correlation,GAD2,Uncontrollable Worry,0.6911532049251399,19,False
+PC,Pearson correlation,GAD3,Trouble Relaxing,0.7628704765108214,9,True
+PC,Pearson correlation,GAD4,Easily Irritated,0.8217964609413394,6,True
+PC,Pearson correlation,GAD5,Excessive Worry,0.8254811311364886,5,True
+PC,Pearson correlation,GAD6,Restlessness,0.806410311221922,7,True
+PC,Pearson correlation,GAD7,Feeling Afraid,0.8270088109887487,4,True
+PC,Pearson correlation,PHQ1,Low Interest,0.39005664880950053,22,False
+PC,Pearson correlation,PHQ2,Feeling Down,0.843226385924757,1,True
+PC,Pearson correlation,PHQ3,Sleep Problems,0.7539890880629814,10,True
+PC,Pearson correlation,PHQ4,Low Energy,0.8018958303526724,8,True
+PC,Pearson correlation,PHQ5,Appetite Change,0.7247495900444695,13,True
+PC,Pearson correlation,PHQ6,Low Self-Worth,0.8279156117232848,3,True
+PC,Pearson correlation,PHQ7,Poor Concentration,0.7535358907524317,11,True
+PC,Pearson correlation,PHQ8,Psychomotor Change,0.7108120073834412,16,False
+PC,Pearson correlation,PHQ9,Self-Harm Thoughts,0.6436334966662571,21,False
+MI,Mutual information (classification),PSS1,Academic Upset,0.3918880504814364,19,False
+MI,Mutual information (classification),PSS2,Lost Control,0.4530416723930275,13,True
+MI,Mutual information (classification),PSS3,Academic Nervousness,0.42779651234960836,18,False
+MI,Mutual information (classification),PSS4,Cannot Cope,0.4393639063927415,17,False
+MI,Mutual information (classification),PSS5,Handling Confidence,0.2025232075042782,23,False
+MI,Mutual information (classification),PSS6,Going Well,0.1745036878868862,24,False
+MI,Mutual information (classification),PSS7,Irritation Control,0.15792606586951718,25,False
+MI,Mutual information (classification),PSS8,Top Performance,0.15676507305909615,26,False
+MI,Mutual information (classification),PSS9,Grade Anger,0.3797621921432579,20,False
+MI,Mutual information (classification),PSS10,Mounting Difficulties,0.45170582246221147,14,True
+MI,Mutual information (classification),GAD1,Feeling Anxious,0.6020145666656358,2,True
+MI,Mutual information (classification),GAD2,Uncontrollable Worry,0.4508643583470713,15,True
+MI,Mutual information (classification),GAD3,Trouble Relaxing,0.5368832966407735,9,True
+MI,Mutual information (classification),GAD4,Easily Irritated,0.5888796325336108,6,True
+MI,Mutual information (classification),GAD5,Excessive Worry,0.5991385449834215,4,True
+MI,Mutual information (classification),GAD6,Restlessness,0.5780298112903643,7,True
+MI,Mutual information (classification),GAD7,Feeling Afraid,0.591920176167329,5,True
+MI,Mutual information (classification),PHQ1,Low Interest,0.2769327906103738,22,False
+MI,Mutual information (classification),PHQ2,Feeling Down,0.6201750754577344,1,True
+MI,Mutual information (classification),PHQ3,Sleep Problems,0.48625409197881786,11,True
+MI,Mutual information (classification),PHQ4,Low Energy,0.5497440973893473,8,True
+MI,Mutual information (classification),PHQ5,Appetite Change,0.459021856241667,12,True
+MI,Mutual information (classification),PHQ6,Low Self-Worth,0.5992894966882609,3,True
+MI,Mutual information (classification),PHQ7,Poor Concentration,0.5098505669182722,10,True
+MI,Mutual information (classification),PHQ8,Psychomotor Change,0.4464697642579367,16,False
+MI,Mutual information (classification),PHQ9,Self-Harm Thoughts,0.3566991080277453,21,False
+MIR,Mutual information (regression),PSS1,Academic Upset,0.3938317854228961,20,False
+MIR,Mutual information (regression),PSS2,Lost Control,0.48129959981485193,11,True
+MIR,Mutual information (regression),PSS3,Academic Nervousness,0.4616284229455987,14,True
+MIR,Mutual information (regression),PSS4,Cannot Cope,0.4294815074287186,18,False
+MIR,Mutual information (regression),PSS5,Handling Confidence,0.21916174536398447,23,False
+MIR,Mutual information (regression),PSS6,Going Well,0.18220711687334568,24,False
+MIR,Mutual information (regression),PSS7,Irritation Control,0.1602859925296567,26,False
+MIR,Mutual information (regression),PSS8,Top Performance,0.16747777861768398,25,False
+MIR,Mutual information (regression),PSS9,Grade Anger,0.4038296341896084,19,False
+MIR,Mutual information (regression),PSS10,Mounting Difficulties,0.4541860854159099,15,True
+MIR,Mutual information (regression),GAD1,Feeling Anxious,0.6042303217544402,5,True
+MIR,Mutual information (regression),GAD2,Uncontrollable Worry,0.45091469020340913,16,False
+MIR,Mutual information (regression),GAD3,Trouble Relaxing,0.5333832962352165,9,True
+MIR,Mutual information (regression),GAD4,Easily Irritated,0.6112895967577323,2,True
+MIR,Mutual information (regression),GAD5,Excessive Worry,0.6010692379230855,6,True
+MIR,Mutual information (regression),GAD6,Restlessness,0.5797339299114075,7,True
+MIR,Mutual information (regression),GAD7,Feeling Afraid,0.6053269292433017,4,True
+MIR,Mutual information (regression),PHQ1,Low Interest,0.2641705565157988,22,False
+MIR,Mutual information (regression),PHQ2,Feeling Down,0.6206957239466169,1,True
+MIR,Mutual information (regression),PHQ3,Sleep Problems,0.4629848572256545,13,True
+MIR,Mutual information (regression),PHQ4,Low Energy,0.5423214408143009,8,True
+MIR,Mutual information (regression),PHQ5,Appetite Change,0.4663927942320356,12,True
+MIR,Mutual information (regression),PHQ6,Low Self-Worth,0.610381858637445,3,True
+MIR,Mutual information (regression),PHQ7,Poor Concentration,0.5257193458836262,10,True
+MIR,Mutual information (regression),PHQ8,Psychomotor Change,0.43678205205770215,17,False
+MIR,Mutual information (regression),PHQ9,Self-Harm Thoughts,0.3595220484600583,21,False
+MU,Fewest unique values,PSS1,Academic Upset,-5.0,17,False
+MU,Fewest unique values,PSS2,Lost Control,-5.0,18,False
+MU,Fewest unique values,PSS3,Academic Nervousness,-5.0,19,False
+MU,Fewest unique values,PSS4,Cannot Cope,-5.0,20,False
+MU,Fewest unique values,PSS5,Handling Confidence,-5.0,21,False
+MU,Fewest unique values,PSS6,Going Well,-5.0,22,False
+MU,Fewest unique values,PSS7,Irritation Control,-5.0,23,False
+MU,Fewest unique values,PSS8,Top Performance,-5.0,24,False
+MU,Fewest unique values,PSS9,Grade Anger,-5.0,25,False
+MU,Fewest unique values,PSS10,Mounting Difficulties,-5.0,26,False
+MU,Fewest unique values,GAD1,Feeling Anxious,-4.0,1,True
+MU,Fewest unique values,GAD2,Uncontrollable Worry,-4.0,2,True
+MU,Fewest unique values,GAD3,Trouble Relaxing,-4.0,3,True
+MU,Fewest unique values,GAD4,Easily Irritated,-4.0,4,True
+MU,Fewest unique values,GAD5,Excessive Worry,-4.0,5,True
+MU,Fewest unique values,GAD6,Restlessness,-4.0,6,True
+MU,Fewest unique values,GAD7,Feeling Afraid,-4.0,7,True
+MU,Fewest unique values,PHQ1,Low Interest,-4.0,8,True
+MU,Fewest unique values,PHQ2,Feeling Down,-4.0,9,True
+MU,Fewest unique values,PHQ3,Sleep Problems,-4.0,10,True
+MU,Fewest unique values,PHQ4,Low Energy,-4.0,11,True
+MU,Fewest unique values,PHQ5,Appetite Change,-4.0,12,True
+MU,Fewest unique values,PHQ6,Low Self-Worth,-4.0,13,True
+MU,Fewest unique values,PHQ7,Poor Concentration,-4.0,14,True
+MU,Fewest unique values,PHQ8,Psychomotor Change,-4.0,15,True
+MU,Fewest unique values,PHQ9,Self-Harm Thoughts,-4.0,16,False
+VT,Highest variance,PSS1,Academic Upset,1.712455376419242,4,True
+VT,Highest variance,PSS2,Lost Control,1.7367640173048295,2,True
+VT,Highest variance,PSS3,Academic Nervousness,1.6838118680895955,5,True
+VT,Highest variance,PSS4,Cannot Cope,1.8031176682787586,1,True
+VT,Highest variance,PSS5,Handling Confidence,1.4211201233719137,9,True
+VT,Highest variance,PSS6,Going Well,1.3293984558381182,12,True
+VT,Highest variance,PSS7,Irritation Control,1.1573170944986049,25,False
+VT,Highest variance,PSS8,Top Performance,1.3172192853653648,14,True
+VT,Highest variance,PSS9,Grade Anger,1.6745524779930958,6,True
+VT,Highest variance,PSS10,Mounting Difficulties,1.7139313279977788,3,True
+VT,Highest variance,GAD1,Feeling Anxious,1.2681699189896791,20,False
+VT,Highest variance,GAD2,Uncontrollable Worry,1.2685521212156228,19,False
+VT,Highest variance,GAD3,Trouble Relaxing,1.2870724625481538,18,False
+VT,Highest variance,GAD4,Easily Irritated,1.26297926879495,21,False
+VT,Highest variance,GAD5,Excessive Worry,1.3053101932347924,16,False
+VT,Highest variance,GAD6,Restlessness,1.3182635329810837,13,True
+VT,Highest variance,GAD7,Feeling Afraid,1.430694533039405,8,True
+VT,Highest variance,PHQ1,Low Interest,1.029506084174146,26,False
+VT,Highest variance,PHQ2,Feeling Down,1.3962725632791086,10,True
+VT,Highest variance,PHQ3,Sleep Problems,1.337386488639263,11,True
+VT,Highest variance,PHQ4,Low Energy,1.302538536027948,17,False
+VT,Highest variance,PHQ5,Appetite Change,1.2419036990447032,23,False
+VT,Highest variance,PHQ6,Low Self-Worth,1.4477973950493754,7,True
+VT,Highest variance,PHQ7,Poor Concentration,1.260719366859817,22,False
+VT,Highest variance,PHQ8,Psychomotor Change,1.1930291977107719,24,False
+VT,Highest variance,PHQ9,Self-Harm Thoughts,1.3061082883228863,15,True

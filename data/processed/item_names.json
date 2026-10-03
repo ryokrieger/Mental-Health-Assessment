@@ -1,0 +1,36 @@
+{
+  "names": {
+    "PSS1": "Academic Upset",
+    "PSS2": "Lost Control",
+    "PSS3": "Academic Nervousness",
+    "PSS4": "Cannot Cope",
+    "PSS5": "Handling Confidence",
+    "PSS6": "Going Well",
+    "PSS7": "Irritation Control",
+    "PSS8": "Top Performance",
+    "PSS9": "Grade Anger",
+    "PSS10": "Mounting Difficulties",
+    "GAD1": "Feeling Anxious",
+    "GAD2": "Uncontrollable Worry",
+    "GAD3": "Trouble Relaxing",
+    "GAD4": "Easily Irritated",
+    "GAD5": "Excessive Worry",
+    "GAD6": "Restlessness",
+    "GAD7": "Feeling Afraid",
+    "PHQ1": "Low Interest",
+    "PHQ2": "Feeling Down",
+    "PHQ3": "Sleep Problems",
+    "PHQ4": "Low Energy",
+    "PHQ5": "Appetite Change",
+    "PHQ6": "Low Self-Worth",
+    "PHQ7": "Poor Concentration",
+    "PHQ8": "Psychomotor Change",
+    "PHQ9": "Self-Harm Thoughts"
+  },
+  "reverse_scored": [
+    "PSS5",
+    "PSS6",
+    "PSS7",
+    "PSS8"
+  ]
+}
