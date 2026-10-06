@@ -1,0 +1,9 @@
+Feature_Method,Tuned_On,Model,Best_Params,Candidates,CV_F1_Macro,Fresh_CV_F1_Macro,Test_Accuracy,Test_F1_Macro,Test_Balanced_Accuracy,Test_MCC,Test_AUC_Macro_OvR,Test_F1_Stable,Test_F1_Challenged,Test_F1_Critical,Search_Seconds
+vt,vt,LR,"{'solver': 'saga', 'max_iter': 500, 'C': 1}",30,0.7956,0.7964,0.8716,0.8125,0.8758,0.7724,0.9657,0.6557,0.8807,0.901,4.8
+vt,vt,DT,"{'min_samples_split': 16, 'min_samples_leaf': 10, 'max_depth': 8, 'criterion': 'entropy'}",30,0.7716,0.7786,0.8395,0.785,0.8071,0.7026,0.9285,0.6538,0.8584,0.8428,4.4
+vt,vt,RF,"{'n_estimators': 50, 'min_samples_split': 2, 'max_features': 'sqrt', 'max_depth': 15}",30,0.8568,0.8275,0.9012,0.8657,0.8651,0.8152,0.9752,0.7826,0.9127,0.902,29.9
+vt,vt,KNN,"{'weights': 'distance', 'n_neighbors': 8, 'metric': 'manhattan'}",30,0.806,0.8055,0.8617,0.7963,0.8555,0.7537,0.945,0.623,0.8721,0.8939,4.7
+vt,vt,SVM,"{'kernel': 'poly', 'gamma': 0.01, 'C': 100}",30,0.8314,0.8326,0.879,0.8313,0.8428,0.7758,0.959,0.72,0.8968,0.8772,11.7
+vt,vt,GB,"{'n_estimators': 100, 'min_samples_split': 2, 'max_depth': 3, 'learning_rate': 0.05}",30,0.8321,0.8272,0.9012,0.8532,0.8535,0.8156,0.9739,0.7391,0.9143,0.9061,122.6
+vt,vt,XGB,"{'subsample': 0.6, 'n_estimators': 200, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.6}",30,0.8402,0.8289,0.9012,0.8497,0.8405,0.8147,0.9721,0.7273,0.9127,0.9091,34.3
+vt,vt,LGBM,"{'num_leaves': 20, 'n_estimators': 100, 'min_child_samples': 50, 'learning_rate': 0.1}",30,0.8355,0.8181,0.8988,0.8553,0.8665,0.8129,0.9698,0.75,0.9087,0.9073,33.3

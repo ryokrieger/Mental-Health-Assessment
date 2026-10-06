@@ -1,0 +1,4 @@
+Strategy,Searches,Mean_Delta_Fresh_CV,Mean_Delta_Test,Share_Improved_Fresh_CV,Share_Improved_Test,Mean_Search_CV,Mean_Fresh_CV,Best_Test_F1_Macro,Best_Fresh_CV,Total_Search_Minutes
+randomized,48,0.008,0.0005,0.7917,0.5208,0.8457,0.8341,0.8978,0.8797,23.6917
+grid,48,0.0041,-0.0031,0.5833,0.3958,0.8411,0.8302,0.89,0.8797,7.7567
+bayes,48,0.0067,0.0004,0.75,0.5208,0.846,0.8328,0.8942,0.8723,20.435
