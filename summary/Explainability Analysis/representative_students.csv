@@ -1,0 +1,4 @@
+Class,Test_Index,row_id,Predicted_Probability,P_Stable,P_Challenged,P_Critical,PSS2,PSS10,GAD1,GAD2,GAD3,GAD4,GAD5,GAD6,GAD7,PHQ2,PHQ3,PHQ4,PHQ5,PHQ6,PHQ7
+Stable,215,2004,0.977,0.977,0.023,0.0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Challenged,47,1659,0.927,0.073,0.927,0.0,2,2,0,1,1,1,1,1,1,0,0,0,0,0,1
+Critical,59,36,0.97,0.003,0.027,0.97,3,4,3,3,3,3,3,3,3,3,1,1,0,3,3

@@ -1,0 +1,4 @@
+Scale,Items_Selected,Items_In_Scale,Attribution_Stable,Attribution_Challenged,Attribution_Critical,Attribution_Global,Share_Stable_%,Share_Challenged_%,Share_Critical_%,Share_Global_%
+PSS-10 (stress),2,10,0.022,0.0554,0.0543,0.0439,5.2,9.7,9.9,8.6
+GAD-7 (anxiety),7,7,0.232,0.3199,0.2857,0.2792,54.8,56.1,52.3,54.4
+PHQ-9 (depression),6,9,0.1691,0.1947,0.2062,0.19,40.0,34.2,37.8,37.0

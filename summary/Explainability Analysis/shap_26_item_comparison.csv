@@ -1,0 +1,27 @@
+Item,Item_Name,Selected_In_15,Mean_Abs_SHAP_Global_26,Rank_26
+GAD7,Feeling Afraid,True,0.055266,1
+PHQ2,Feeling Down,True,0.049526,2
+GAD4,Easily Irritated,True,0.042181,3
+PHQ6,Low Self-Worth,True,0.039582,4
+GAD1,Feeling Anxious,True,0.039331,5
+GAD5,Excessive Worry,True,0.03753,6
+GAD3,Trouble Relaxing,True,0.027475,7
+GAD6,Restlessness,True,0.026532,8
+PHQ4,Low Energy,True,0.022134,9
+PHQ7,Poor Concentration,True,0.019583,10
+PHQ5,Appetite Change,True,0.016885,11
+PHQ3,Sleep Problems,True,0.015957,12
+PSS2,Lost Control,True,0.01489,13
+PSS10,Mounting Difficulties,True,0.014767,14
+GAD2,Uncontrollable Worry,True,0.014523,15
+PSS4,Cannot Cope,False,0.0139,16
+PHQ8,Psychomotor Change,False,0.013062,17
+PSS3,Academic Nervousness,False,0.012047,18
+PHQ9,Self-Harm Thoughts,False,0.011203,19
+PSS1,Academic Upset,False,0.010608,20
+PSS9,Grade Anger,False,0.007245,21
+PHQ1,Low Interest,False,0.005099,22
+PSS6,Going Well †,False,0.004919,23
+PSS8,Top Performance †,False,0.003237,24
+PSS7,Irritation Control †,False,0.002838,25
+PSS5,Handling Confidence †,False,0.002754,26

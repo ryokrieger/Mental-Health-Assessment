@@ -1,0 +1,4 @@
+Class,row_id,Mean_Pairwise_Jaccard_Top5,Min_Pairwise_Jaccard_Top5,LIME_Top5_Items,LIME_Top5_Selection_Frequency,SHAP_Top5_Items,LIME_SHAP_Top5_Overlap
+Stable,2004,0.881,0.667,"GAD4, GAD7, PHQ2, PHQ4, GAD1","1.0, 1.0, 1.0, 1.0, 0.8","GAD7, GAD1, GAD4, PHQ2, PHQ6",4
+Challenged,1659,0.822,0.667,"GAD1, GAD4, PHQ2, PHQ6, GAD5","1.0, 1.0, 1.0, 1.0, 0.6","GAD7, GAD4, GAD2, GAD6, GAD3",1
+Critical,36,0.822,0.667,"PSS10, GAD4, PHQ2, PHQ6, GAD7","1.0, 1.0, 1.0, 1.0, 0.6","GAD7, PHQ6, PHQ2, GAD4, GAD1",4
