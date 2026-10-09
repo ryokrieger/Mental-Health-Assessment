@@ -1,0 +1,7 @@
+Model,Variant,Tokens_Mean,Tokens_P95,Tokens_Max,Max_Length_Used,Share_Truncated
+bert,items,319.5,334,348,348,0.0
+distilbert,items,319.5,334,348,348,0.0
+distilbert,full,402.1,417,432,432,0.0
+albert,items,342.5,357,371,371,0.0
+biobert,items,322.5,337,351,351,0.0
+clinicalbert,items,319.5,334,348,348,0.0
