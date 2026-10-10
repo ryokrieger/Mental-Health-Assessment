@@ -1,0 +1,5 @@
+Test,Detail,Statistic,p_value
+McNemar's exact (test set),"best only 5, second only 8",-3.0,0.5811
+Paired bootstrap of test macro F1 difference,"95% interval [-0.0567, +0.0019]",-0.0237,
+Wilcoxon signed-rank (25 CV folds),mean difference -0.0002,-0.0002,1.0
+Nadeau-Bengio corrected t-test (25 CV folds),t = -0.02,-0.018,0.9857

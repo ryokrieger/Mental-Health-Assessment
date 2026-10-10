@@ -1,0 +1,12 @@
+Item,Value,CI95_Low,CI95_High,Metric
+Stable,0.9883,0.9741,0.998,AUC (one-vs-rest)
+Challenged,0.9777,0.9655,0.9875,AUC (one-vs-rest)
+Critical,0.9891,0.9821,0.9944,AUC (one-vs-rest)
+Macro average,0.985,0.9765,0.992,AUC (one-vs-rest)
+Macro F1,0.8663,0.807,0.9149,Test metric
+Accuracy,0.9062,0.8765,0.9309,Test metric
+Balanced accuracy,0.8564,0.792,0.9163,Test metric
+MCC,0.8239,0.7703,0.8723,Test metric
+F1 Stable,0.7727,0.6206,0.898,Test metric
+F1 Challenged,0.917,0.8899,0.9402,Test metric
+F1 Critical,0.9091,0.8741,0.9385,Test metric

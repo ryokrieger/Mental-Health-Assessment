@@ -1,0 +1,2 @@
+Comparison,Mean_A,Mean_B,Mean_Difference_A_minus_B,Folds_A_better,Folds_B_better,Folds_tied,Wilcoxon_p,Corrected_t,Corrected_t_p
+"A − B (CV macro F1, 25 folds)",0.8662,0.8629,0.0033,14,9,2,0.2735,0.384,0.704

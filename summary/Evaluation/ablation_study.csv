@@ -1,0 +1,6 @@
+Configuration,Items,SMOTE,Tuned,CV_F1_Macro_Mean,CV_F1_Macro_Std,Test_F1_Macro,Test_Accuracy,Test_F1_Stable,Test_F1_Challenged,Test_F1_Critical,Deployed_minus_This_CV,Corrected_t_p_vs_deployed
+1  All 26 items · no SMOTE · default RF,26,False,False,0.8684,0.0351,0.8901,0.921,0.8205,0.9307,0.9191,-0.0021,0.9054
+2  All 26 items · SMOTE · default RF,26,True,False,0.8767,0.025,0.8938,0.9259,0.8182,0.9345,0.9286,-0.0105,0.3434
+3  15 items · no SMOTE · default RF,15,False,False,0.8595,0.0253,0.8608,0.8963,0.7805,0.9087,0.8932,0.0067,0.6047
+4  15 items · SMOTE · default RF,15,True,False,0.8602,0.02,0.8597,0.9086,0.7442,0.9194,0.9156,0.006,0.3449
+5  15 items · SMOTE · tuned RF (deployed),15,True,True,0.8662,0.0198,0.8663,0.9062,0.7727,0.917,0.9091,0.0,

@@ -1,0 +1,5 @@
+Feature_Set,Evaluation,F1_Macro_Status_Single_Output,F1_Macro_Status_Derived_Multi_Output,F1_Macro_Stress_Level,F1_Macro_Anxiety_Level,F1_Macro_Depression_Level,Exact_Match_Ratio,Hamming_Loss
+15 items (deployed set),"CV (25 folds, training students)",0.8619,0.8806,0.6072,0.9448,0.8903,0.7262,0.1033
+15 items (deployed set),Held-out test,0.8772,0.8919,0.6943,0.9092,0.8672,0.7284,0.1004
+All 26 items,"CV (25 folds, training students)",0.8711,0.9192,0.8266,0.9323,0.9171,0.823,0.0624
+All 26 items,Held-out test,0.8897,0.895,0.824,0.9158,0.8937,0.8198,0.0667
